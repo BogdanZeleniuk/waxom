@@ -10,17 +10,26 @@ body{
 }
 div{
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 .brightness__box{
 	position: absolute;
 	background: url(../img/header_background.png) no-repeat;
 	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
 	filter: brightness(40%);
 	display: block;
 	height: 100%;
 	width: 100%;
 	z-index: 0;
 	transform: scale(1.15, 1.15);
+	-ms-transform: scale(1.15, 1.15);
+	-webkit-transform: scale(1.15, 1.15);
+	-o-transform: scale(1.15, 1.15);
+	-moz-transform: scale(1.15, 1.15);
 }
 header,
 .box{
@@ -51,7 +60,7 @@ header,
 	font: 34px 'Raleway', sans-serif;	
 	padding-top: 55px;
 	float: left;
-	color: #ffffffff;
+	color: #ffffff;
 	cursor: pointer;
 }
 .logo__name a{
@@ -70,7 +79,7 @@ header,
 .menu a{
 	text-decoration: none;
 	margin-left: 30px;
-	color: #ffffffff;
+	color: #ffffff;
 }
 .menu li button{
 	background: none;
@@ -94,7 +103,7 @@ header,
 	margin: 0 auto;
 	font-weight: 600;
 	letter-spacing: normal;
-	color: #ffffffff;
+	color: #ffffff;
 }
 h1{
 	font: 48px 'Raleway', sans-serif;
@@ -102,32 +111,34 @@ h1{
 	line-height: 1.5em;
 	margin: 0;
 	font-weight: 600;
-	color: #ffffffff;
+	color: #ffffff;
 }
 .box p{
 	text-align: center;
 	padding-top: 30px;
 	margin: 0 auto;
 	padding: 10px;
-	color: #ffffffff;
+	color: #ffffff;
 }
 .left__arrow{
 	cursor: pointer;
 	position: absolute;
 	margin-top: -50px;
-	margin-left: -115px;
+	margin-left: -70px;
 }
 .left__arrow:hover{
 	opacity: 0.7;
+	-moz-opacity: 0.7;
 }
 .right__arrow{
 	cursor: pointer;
 	position: absolute;
 	margin-top: -50px;
-	margin-left: 1250px;
+	margin-left: 1220px;
 }
 .right__arrow:hover{
 	opacity: 0.7;
+	-moz-opacity: 0.7;
 }
 .get__started{
 	text-transform: uppercase;
@@ -137,6 +148,8 @@ h1{
 	color: #ffffff;
 	padding: 15px 30px;
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	display: block;
 	width: 170px;
 	margin: 0 auto;
@@ -160,6 +173,8 @@ h1{
 	display: inline-block;
 	cursor: pointer;
 	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
 	width: 15px;
 	height: 15px;
 	margin-left: 10px;
@@ -174,6 +189,10 @@ h1{
 	display: inline-block;
 	background-color: transparent;
 	border: 1.5px solid white;
+    -moz-border-top: white;
+    -moz-border-bottom: white;
+    -moz-border-left: white;
+    -moz-border-right: white;
 	height: 18px;
 	width: 19px;
 }
@@ -183,7 +202,13 @@ h1{
 	text-align: center;
 	display: inline-block;
 	background-image: linear-gradient(#f1eee9, #ffffff);
+	background-image: -moz-linear-gradient(#f1eee9, #ffffff);
+	background-image: -o-linear-gradient(#f1eee9, #ffffff);
+	background-image: -webkit-linear-gradient(#f1eee9, #ffffff);
 	background-size: 25% 3px;
+	-webkit-background-size: 25% 3px;
+	-o-background-size: 25% 3px;
+	-moz-background-size: 25% 3px;
     background-position: center bottom;
     background-repeat: no-repeat;
     margin: 80px auto;
@@ -215,6 +240,9 @@ h1{
 }
 .option:nth-child(2){
 	background-image: linear-gradient(#c7b299, #ffffff);
+	background-image: -moz-linear-gradient(#c7b299, #ffffff);
+	background-image: -o-linear-gradient(#c7b299, #ffffff);
+	background-image: -webkit-linear-gradient(#c7b299, #ffffff);
 }
 .title__ideas{
 	font:30px 'Raleway', sans-serif;
@@ -252,6 +280,9 @@ h1{
 }
 #waxom__wordpress{
 	background: linear-gradient(to left, #4e3327, #221c1a);
+	background: -moz-linear-gradient(to left, #4e3327, #221c1a);
+	background: -o-linear-gradient(to left, #4e3327, #221c1a);
+	background: -webkit-linear-gradient(to left, #4e3327, #221c1a);
 }
 .title__wordpress{
 	font: 28px 'Raleway', sans-serif;
@@ -279,6 +310,8 @@ h1{
 	border: none;
 	padding: 15px 30px;
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	float: right;
 	margin-top: -30px;
 	cursor: pointer;
@@ -316,9 +349,15 @@ h1{
 	font-size: 14px;
 	color: #949494;
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	background-color: #ffffff;
 	cursor: pointer;
 	border:1px solid #ebebeb;
+	-moz-border-top: #ebebeb;
+    -moz-border-bottom: #ebebeb;
+    -moz-border-left: #ebebeb;
+    -moz-border-right: #ebebeb;
 }
 .projects__menu button:hover{
 	background-color: #998675;
@@ -330,6 +369,7 @@ h1{
 }
 .image__project{
 	width: 370px;
+	max-width: 100%;
 	height: 330px;
 	padding: 0;
 	float: left;
@@ -356,12 +396,14 @@ h1{
 }
 .picture img{
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 }
 .picture img.magazine{
 	width: 103%;
 	height: 106%;
 	top: -20px;
+	max-width: 100%;
 }
 .magazine__desc{
 	top: 270px;
@@ -399,6 +441,10 @@ h1{
 	position: absolute;
 	margin-top: -100px;
 	border: 10px solid transparent;
+	-moz-border-top: transparent;
+    -moz-border-bottom: #fbfaf8;
+    -moz-border-left: transparent;
+    -moz-border-right: transparent;
 	border-bottom: 10px solid #fbfaf8;
 }
 .active__desc::after{
@@ -406,6 +452,10 @@ h1{
 	position: absolute;
 	margin-top: -100px;
 	border: 10px solid transparent;
+	-moz-border-top: transparent;
+    -moz-border-bottom: #362f2d;
+    -moz-border-left: transparent;
+    -moz-border-right: transparent;
 	border-bottom: 10px solid #362f2d;
 }
 .link{
@@ -443,9 +493,14 @@ h1{
 	font-weight: 700;
 	color: #ffffff;
 	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
 	background-color: #998675;
 	cursor: pointer;
 	border-bottom: 1px solid #736357;
+	-moz-border-top: none;
+    -moz-border-bottom: #736357;
+    -moz-border-left: none;
 	border-top: none;
 	border-left: none;
 	display: block;
@@ -461,6 +516,9 @@ h1{
 	background-image: url(../img/presentation-bg.png);
 	background-repeat: no-repeat;
 	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
 	background-position: 100% 65%;
 	filter: brightness(60%);
 	display: block;
@@ -492,8 +550,11 @@ h1{
 	height: 100px;
 	width: 100px;
 	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
 	background-color: #565a5e;
 	opacity: 0.6;
+	-moz-opacity: 0.6;
 	margin-left: -15px;
 	margin-top: -15px;
 	z-index: 0;
@@ -562,6 +623,9 @@ h1{
 }
 #waxom-results{
 	background: linear-gradient(to left, #4e3327, #221c1a);
+	background: -moz-linear-gradient(to left, #4e3327, #221c1a);
+	background: -o-linear-gradient(to left, #4e3327, #221c1a);
+	background: -webkit-linear-gradient(to left, #4e3327, #221c1a);
 	height: 300px;
 }
 #waxom-results .container{
@@ -577,7 +641,13 @@ h1{
 	margin-top: 50px;
 	margin-bottom: 70px;
 	background-image: linear-gradient(#f1eee9, #ffffff);
+	background-image: -moz-linear-gradient(#f1eee9, #ffffff);
+	background-image: -o-linear-gradient(#f1eee9, #ffffff);
+	background-image: -webkit-linear-gradient(#f1eee9, #ffffff);
     background-size: 25% 3px;
+    -webkit-background-size: 25% 3px;
+	-o-background-size: 25% 3px;
+	-moz-background-size: 25% 3px;
     background-position: center bottom;
     background-repeat: no-repeat;
 }
@@ -632,6 +702,9 @@ h1{
 .post:first-child{
 	background-image: url(../img/post_shoose.png);
 	background-size: 150%;
+	-webkit-background-size: 150%;
+	-o-background-size: 150%;
+	-moz-background-size: 150%;
 	background-repeat: no-repeat;
 	background-position: 60% 100%; 
 }
@@ -639,6 +712,9 @@ h1{
 	float: right;
 	background-image: url(../img/post_sheep.png);
 	background-size: 300%;
+	-webkit-background-size: 300%;
+	-o-background-size: 300%;
+	-moz-background-size: 300%;
 	background-repeat: no-repeat;
 	background-position: 35% 85%;
 }
@@ -646,12 +722,19 @@ h1{
 	margin-left: 45px;
 	background-image: url(../img/post_notebook.png);
 	background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top; 
 	box-shadow: 0 0 0 128px rgba(0,0,0,0.66) inset;
+	-webkit-box-shadow: 0 0 0 128px rgba(0,0,0,0.66) inset;
+	-moz-box-shadow: 0 0 0 128px rgba(0,0,0,0.66) inset;
+
 }
 .post__img{
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	position: relative;
 }
@@ -688,6 +771,10 @@ h1{
 }
 .post-desc{
 	border: 1px solid #f8f8f8;
+	-moz-border-top: #f8f8f8;
+    -moz-border-bottom: #f8f8f8;
+    -moz-border-left: #f8f8f8;
+    -moz-border-right: #f8f8f8;
 	height: 180px;
 	width: 370px;
 	display: inline-block;
@@ -755,6 +842,8 @@ h1{
 	display: inline-block;
 	cursor: pointer;
 	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
 	width: 9px;
 	height: 12px;
 	background-color: #75889a;
@@ -769,6 +858,10 @@ h1{
 	display: inline-block;
 	background-color: transparent;
 	border: 2px solid #d3c1ad;
+	-moz-border-top: #d3c1ad;
+    -moz-border-bottom: #d3c1ad;
+    -moz-border-left: #d3c1ad;
+    -moz-border-right: #d3c1ad;
 	height: 16px;
 	width: 15px;
 }
@@ -798,6 +891,10 @@ h1{
 	background-color: transparent;
 	border: none;
 	transform: scale(-1,1);
+	-ms-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-moz-transform: scale(-1, 1);
 }
 .right__post__active{
 	width: 25px;
@@ -809,16 +906,25 @@ h1{
 	background-color: transparent;
 	border: none;
 	transform: scale(1,1);
+	-ms-transform: scale(1, 1);
+	-webkit-transform: scale(1, 1);
+	-o-transform: scale(1, 1.);
+	-moz-transform: scale(1, 1);
 }
 #waxom-clients{
 	background: url(../img/clients_bg.png);
 	background-repeat: no-repeat;
 	background-size: 130% auto;
+	-webkit-background-size: 130% auto;
+	-o-background-size: 130% auto;
+	-moz-background-size: 130% auto;
 	background-position: 85% 60%;
 	height: 490px;
 	margin: 0 auto;
 	display: block;
 	box-shadow: 0 0 0 245px rgba(0,0,0,0.66) inset;
+	-webkit-box-shadow: 0 0 0 245px rgba(0,0,0,0.66) inset;
+	-moz-box-shadow: 0 0 0 245px rgba(0,0,0,0.66) inset;
 }
 .clients__logo{
 	display: block;
@@ -918,7 +1024,13 @@ h1{
 	padding-bottom: 20px;
 	line-height: 1.4em;
 	background-image: linear-gradient(#252525, #252525);
+	background-image: -moz-linear-gradient(#252525, #252525);
+	background-image: -o-linear-gradient(#252525, #252525);
+	background-image: -webkit-linear-gradient(#252525, #252525);
 	background-size: 100% 2px;
+	-webkit-background-size: 100% 2px;
+	-o-background-size: 100% 2px;
+	-moz-background-size: 100% 2px;
     background-position: center bottom;
     background-repeat: no-repeat;
     margin-top: 5px;
@@ -931,6 +1043,9 @@ h1{
 	line-height: 1.4em;
 	background-image: none;
 	background-size: 100% 2px;
+	-webkit-background-size: 100% 2px;
+	-o-background-size: 100% 2px;
+	-moz-background-size: 100% 2px;
     background-position: center bottom;
     background-repeat: no-repeat;
     margin-top: 5px;
@@ -952,7 +1067,13 @@ h1{
 	font-weight: 200;
 	cursor: pointer;
 	background-size: 100% 2px;
+	-webkit-background-size: 100% 2px;
+	-o-background-size: 100% 2px;
+	-moz-background-size: 100% 2px;
 	background-image: linear-gradient(#252525, #252525);
+	background-image: -moz-linear-gradient(#252525, #252525);
+	background-image: -o-linear-gradient(#252525, #252525);
+	background-image: -webkit-linear-gradient(#252525, #252525);
     background-position: center bottom;
     background-repeat: no-repeat;
     padding-bottom: 40px;
@@ -1017,6 +1138,7 @@ h1{
 }
 .widget__picture img{
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 }
 footer{
@@ -1042,6 +1164,7 @@ footer li{
 	font-weight: 200;
 	margin-right: 15px;
 	border-right: 2px solid #232323;
+    -moz-border-right: #232323;
 	padding-right: 15px;
 }
 footer li:last-child{
