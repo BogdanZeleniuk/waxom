@@ -6,104 +6,93 @@
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800" rel="stylesheet">
+	<script src="js/main.js"></script>
 </head>
 <body>
 	<header>
-		<div class="brightness__box"></div>
-		<div class="box">
-			<div class="container">
-				<a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
-				<div class="logo__name">Waxom</div>
-				<div class="menu">
-					<ul>
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#">About Us</a>
-						</li>
-						<li>
-							<a href="#">Portfolio</a>
-						</li>
-						<li>
-							<a href="#">Features</a>
-						</li>
-						<li>
-							<a href="#">Blog</a>
-						</li>
-						<li>
-							<a href="#">Pricing</a>
-						</li>
-						<li>
-							<a href="#">Shortcodes</a>
-						</li>
-						<li>
-							<a href="#">Contact</a>
-						</li>
-						<li>
-							<button id="calendar-icon"><img src="img/icon-calendar-menu.png" alt="calendar" class="calendar"></button>
-						</li>
-						<li>
-							<button id="search-icon"><img src="img/icon-search-menu.png" alt="search" class="search"></button>
-						</li>
-					</ul>
+		<div class="container">
+			<div class="header_inner">
+				<div class="logo_box">
+					<a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+					<div class="logo_name">Waxom</div>
 				</div>
-				<div class="titles__first">Unique and Modern Design</div>
-				<h1>Portfolio PSD Template</h1>
-				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imper-</br>diet doming id quod mazim placerat facer possim assum.</p>
-				<div class="left__arrow">
-					<img src="img/left_icon.png" alt="left" class="left__icon">
-				</div>
-				<div class="right__arrow">
-					<img src="img/right_icon.png" alt="right" class="right__icon">
-				</div>
-				<button class="get__started">Get Started</button>
-				<div class="dots_container">
-					<ul>
-						<li>
-							<button id="01" type="button"></button>
-						</li>
-						<li class="button__active">
-							<button id="02" type="button"></button>
-						</li>
-						<li>
-							<button id="03" type="button"></button>
-						</li>
-						<li>
-							<button id="04" type="button"></button>
-						</li>
-						<li>
-							<button id="05" type="button"></button>
-						</li>
-					</ul>
-				</div>
+				
+				<nav class="menu">
+						<a class="menu_link" href="#">Home</a>
+						<a class="menu_link" href="#">About Us</a>
+						<a class="menu_link" href="#">Portfolio</a>
+						<a class="menu_link" href="#">Features</a>
+						<a class="menu_link" href="#">Blog</a>
+						<a class="menu_link" href="#">Pricing</a>
+						<a class="menu_link" href="#">Shortcodes</a>
+						<a class="menu_link" href="#">Contact</a>
+						<a class="menu_link calendar"></a>
+						<a class="menu_link search_icon">
+								<div class="search_form">
+									<input type="search" name="search" placeholder="search here" class="search_input">
+								</div>
+						</a>
+							<script>
+								var search = new Search({
+									elem: document.getElementById('search-icon')
+								});
+							</script>
+				</nav>
 			</div>
 		</div>
 	</header>
-	<section id="waxom__options">
+	<section id="intro" class="intro">
+		<div class="container">
+			<div class="intro_box">
+				<a class="left_arrow"></a>
+				<div class="intro_inner">
+					<h2 class="intro_suptitle">Unique and Modern Design</h2>
+					<h1 class="intro_title">Portfolio PSD Template</h1>
+					
+					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+
+					<div class="get_started_btn">
+						<a href="#" class="get_started">get started</a>
+					</div>
+				</div>
+				<a class="right_arrow"></a>
+			</div>
+
+			<div class="intro_slider">
+				<div class="slider_inner">
+					<span class="intro_dot" id="01"></span>
+					<span class="intro_dot active_dot" id="02"></span>
+					<span class="intro_dot" id="03"></span>
+					<span class="intro_dot" id="04"></span>
+					<span class="intro_dot" id="05"></span>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="waxom_options">
 		<div class="container">
 			<div class="options">
 				<div class="option">
-					<img src="img/web_icon.png" alt="" class="web">
-					<div class="option__name">Web & App Design</div>
+					<span class="option_web"></span>
+					<div class="option_name">Web & App Design</div>
 					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>	
 				</div>
 				<div class="option">
-					<img src="img/development_icon.png" alt="" class="development">
-					<div class="option__name dev">Development</div>
-					<p>Lorem ipsum dolor sit amet, adipisc-ing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet.</p>
+					<span class="option_development"></span>
+					<div class="option_name dev">Development</div>
+					<p>Lorem ipsum dolor sit amet, adipiscing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet.</p>
 				</div>
 				<div class="option">
-					<img src="img/customization_icon.png" alt="" class="customization">
-					<div class="option__name">Customization</div>
+					<span class="option_customization"></span>
+					<div class="option_name">Customization</div>
 					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
 				</div>
 				<div class="option">
-					<img src="img/marketing_icon.png" alt="" class="marketing">
-					<div class="option__name">Marketing</div>
+					<span class="option_marketing"></span>
+					<div class="option_name">Marketing</div>
 					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.</p>
 				</div>
-				<div style="clear:both"></div>
 			</div>
 		</div>
 	</section>
