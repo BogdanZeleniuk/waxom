@@ -509,7 +509,8 @@ header{
 .description:after{
 	content: '';
 	position: absolute;
-	margin-top: -104px;
+	z-index: 5;
+	margin-top: -102px;
 	border: 10px solid transparent;
 	-moz-border-top: transparent;
     -moz-border-bottom: #fbfaf8;
@@ -528,6 +529,8 @@ header{
 	left: 140px;
 	top: 105px;
 	position: absolute;
+	z-index: 15;
+	display: none;
 }
 .lupa{
 	background-image: url(../img/lupa.png);
@@ -537,11 +540,27 @@ header{
 	left: 200px;
 	top: 105px;
 	position: absolute;
+	z-index: 15;
+	display: none;
+}
+.lupa_active{
+	display: block;
+}
+.link_active{
+	display: block;
 }
 .link:hover,
 .lupa:hover{
 	filter: brightness(20%);
 	transition: filter .4s linear;
+}
+.big_img{
+	transform: scale(2);
+	position: absolute;
+	z-index: 10;
+	border: 5px solid green;
+	border-radius: 10px;
+	filter: brightness(100%);
 }
 .load_more{
 	margin: 0 auto 80px;

@@ -175,3 +175,28 @@ function BrowserPictures(options){
 		}
 	}
 }
+function Lupa(options){
+	var elem = options.elem;
+
+	for (var i = 0; i < elem.length; i++) {
+		elem[i].onclick = function(event){
+			var target = event.target;
+			if (target.classList.contains('lupa_active')) {
+				target.parentNode.children[0].classList.toggle('big_img');
+			}
+		}		
+	}
+}
+
+function Picture(options){
+	var elem = options.elem;
+
+	for (var i = 0; i < elem.length; i++) {
+		elem[i].onmouseover = function(event){
+			var target = event.target;
+			if (target.tagName == 'IMG') {
+				target.nextSibling.nextSibling.nextSibling.nextSibling.classList.toggle('lupa_active');	
+			}
+		}		
+	}
+}

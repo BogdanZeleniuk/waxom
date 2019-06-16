@@ -173,6 +173,8 @@
 					<div class="project">
 						<div class="picture">
 							<img src="img/mobile_project.png" alt="" class="mobile">
+							<a class="link"></a>
+							<a class="lupa"></a>
 						</div>
 						<div class="description">
 							<span>Claritas Etiam Processus</span>
@@ -181,9 +183,9 @@
 					</div>
 					<div class="project">
 						<div class="picture pict_active">
-							<img src="img/nature_project_active.png" alt="" class="nature_active active_img">
-							<a class="link"></a>
-							<a class="lupa"></a>
+							<img src="img/nature_project_active.png" alt="" class="sea_first active_img">
+							<a class="link link_active"></a>
+							<a class="lupa lupa_active"></a>
 						</div>
 						<div class="description active_desc">
 							<span>Quam Nutamus Farum</span>
@@ -192,7 +194,9 @@
 					</div>
 					<div class="project">
 						<div class="picture">
-							<img src="img/book_project.png" alt="" class="book_project">
+							<img src="img/book_project.png" alt="" class="book">
+							<a class="link"></a>
+							<a class="lupa"></a>
 						</div>
 						<div class="description">
 							<span>Usus Legentis Videntur</span>
@@ -201,7 +205,9 @@
 					</div>
 					<div class="project">
 						<div class="picture">
-							<img src="img/nature_project_beards.png" alt="">
+							<img src="img/nature_project_beards.png" alt="" class="beards">
+							<a class="link"></a>
+							<a class="lupa"></a>
 						</div>
 						<div class="description">
 							<span>Claritas Etiam Processus</span>
@@ -211,6 +217,8 @@
 					<div class="project">
 						<div class="picture">
 							<img src="img/magazine+project.png" alt="" class="magazine">
+							<a class="link"></a>
+							<a class="lupa"></a>
 						</div>
 						<div class="description">
 							<span>Usus Legentis Videnturs</span>
@@ -219,13 +227,25 @@
 					</div>
 					<div class="project">
 						<div class="picture">
-							<img src="img/nature_project_sea.png" alt="" class="sea">
+							<img src="img/nature_project_sea.png" alt="" class="sea_second">
+							<a class="link"></a>
+							<a class="lupa"></a>
 						</div>
 						<div class="description">
 							<span>Usus Legentis Videntur</span>
 							<div class="project_kategory">Photography, Holiday</div>
 						</div>
 					</div>
+					<script>
+							var lupa = new Lupa({
+								elem: document.getElementsByClassName('lupa')
+							});
+						</script>
+						<script>
+							var picture = new Picture({
+								elem: document.getElementsByClassName('picture')
+							})
+						</script>
 				</div>
 			<div class="load_more_btn">
 				<a href="#" id="load-more" class="load_more btn">load more</a>
