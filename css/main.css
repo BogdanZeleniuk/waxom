@@ -65,7 +65,7 @@ header{
 	cursor: pointer;	
 }
 .menu_link:nth-child(10):hover{
-	filter: brightness(20%);
+	filter: brightness(60%);
 	transition: filter .4s linear;
 }
 .menu_link:nth-child(9){
@@ -76,8 +76,20 @@ header{
 	cursor: pointer;
 	margin-left: 70px;
 }
+.datetime{
+	display: none;
+}
+.datetime.datetime_open{
+	display: block;
+}
+.search_inner_elem{
+	display: none;
+}
+.search_inner_elem.search_inner_elem_open{
+	display: block;
+}
 .menu_link:nth-child(9):hover{
-	filter: brightness(20%);
+	filter: brightness(60%);
 	transition: filter .4s linear;
 }
 .menu_link:nth-child(2){
@@ -170,13 +182,46 @@ header{
 	margin-top: 50px;
 	cursor: pointer;
 	border: none;
-	text-align: center;
-	
+	text-align: center;	
 }
 .btn:hover{
 	background-color: #ffffff;
 	color: #333333;
 	transition: color .4s linear, background-color .4s linear;
+}
+.second_menu_logo{
+	margin: 20px auto;
+	width: 100%;
+	max-width: 100px;
+	height: 100px;
+	cursor: pointer;
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.second_menu_icon{
+	width: 100%;
+	height: 100%; 
+	display: block;
+	margin: 0 auto;
+	padding-left: 15px;
+	color: #20B2AA;
+}
+.fa.fa-toggle-down{
+	font-size: 100px;
+}
+.second_menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 800px;
+	margin: 20px auto 0;
+	display: none;
+}
+.second_menu.second_menu_open{
+	display: block;
+	margin-left: -310px;
 }
 .intro_slider{
 	position: absolute;
@@ -285,43 +330,46 @@ header{
 }
 #waxom_presentation{
 	background-color: #fbfaf8;
+	width: 100%;
+	height: 740px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .presentation_desc{
 	width: 100%;
 	max-width: 770px;
 	text-align: center;
-	margin: 25px auto 40px;
+	margin: 25px auto 150px;
 	color: #8c8c8c;
 	line-height: 1.7em;
 }
 .browser_pictures{
 	width: 100%;
-	margin: 110px auto 0;
+	max-width: 1150px;
+	height: 100%;
+	margin: 0 auto;
 	position: relative;
 }
 .browser_left{
-	margin: 0 0 -4px -40px;
+	margin: 0 0 0 -40px;
 	z-index: 1;
-	bottom: 0;
-	left: 0;
 	display: inline-block;
 }
 .browser_center{
 	z-index: 10;
 	display: inline-block;
 	position: absolute;
-	bottom: 0;
 	right: 0;
 	left: 0;
-	margin: 0 auto -1px;
+	margin: -80px auto;
 }
 .browser_right{
-	bottom: 0;
 	right: 0;
 	z-index: 5;
 	display: inline-block;
 	position: absolute;
-	margin-right: -40px;
+	margin: 0 -40px 0 0;
 }
 #waxom_wordpress{
 	background: linear-gradient(to left, #4e3327, #221c1a);
@@ -994,10 +1042,4 @@ footer{
 .menu_item:hover span{
 	color: #140aca;
 	transition: color .4s linear;
-}
-.search_form{
-	display: none;
-}
-.search_form .open{
-	display: block;
 }
