@@ -7,6 +7,18 @@ function Calendar(options) {
 			elem.appendChild(input_date);
 			input_date.setAttribute('type', 'datetime-local');
 			input_date.className = 'datetime';
+
+			var currentDate = new Date();
+			var day = currentDate.getDate();
+			var month = (currentDate.getMonth()+1) < 10 ? 
+								('0' + (currentDate.getMonth()+1)) : (currentDate.getMonth()+1);
+			var year = currentDate.getFullYear();
+			var hours = currentDate.getHours();
+			var min = currentDate.getMinutes();
+			var sec = currentDate.getSeconds();
+
+			input_date.value =  year + '-' + month + '-' + day + 'T' + hours + ':' + min + ':' + sec;
+
 	}
 	function removeInput() {
 			elem.firstChild.remove();
@@ -23,7 +35,7 @@ function Calendar(options) {
 		elem.firstChild.classList.add('datetime_open');
 		var coords = elem.firstChild.getBoundingClientRect();
 		elem.firstChild.style.marginTop = elem.firstChild.offsetHeight + 5 + 'px';		
-		elem.firstChild.style.marginRight = elem.firstChild.offsetWidth/2 + 'px';
+		elem.firstChild.style.marginRight = elem.firstChild.offsetWidth / 2 + 'px';
 		elem.firstChild.style.fontSize = 16 + 'px';
 		elem.firstChild.style.borderSize = 3 + 'px';
 		elem.firstChild.style.borderColor = 'green';
@@ -68,22 +80,34 @@ function Search(options) {
 	function createInput() {
 			var input_search = document.createElement('input');
 			elem.appendChild(input_search);
-			input_search.setAttribute('type', 'text');
+			input_search.setAttribute('type', 'search');
 			input_search.className = 'search_inner_elem';
+
+			var btn_search = document.createElement('a');
+			btn_search.innerHTML = 'Search';
+			btn_search.className = 'btn_search_elem';
+			elem.appendChild(btn_search);
 	}
 	function removeInput() {
+			elem.firstChild.remove();
 			elem.firstChild.remove();
 	}
 
 	function close() {
 		elem.firstChild.classList.remove('search_inner_elem_open');
 		document.removeEventListener('click', outsideInputClick);
+
+		elem.firstChild.classList.remove('btn_search_elem_open');
+		document.removeEventListener('click', outsideInputClick);
+
 		isOpen = false;
 		removeInput();
 	}
 
 	function open() {
 		elem.firstChild.classList.add('search_inner_elem_open');
+		elem.children[1].classList.add('btn_search_elem_open');
+		
 		var coords = elem.firstChild.getBoundingClientRect();
 		elem.firstChild.style.marginTop = elem.firstChild.offsetHeight + 5 + 'px';		
 		elem.firstChild.style.marginRight = elem.firstChild.offsetWidth/2 + 'px';
@@ -92,7 +116,7 @@ function Search(options) {
 		elem.firstChild.style.borderColor = 'green';
 		elem.firstChild.style.borderRadius = 10 + 'px';
 		document.addEventListener('click', outsideInputClick);
-   		isOpen = true;		
+   		isOpen = true;
 	}
 
 	function outsideInputClick(event) {
@@ -187,16 +211,58 @@ function Lupa(options){
 		}		
 	}
 }
-
-function Picture(options){
+function Link(options){
 	var elem = options.elem;
 
+	function livingPage(href){
+		var confirmPage = confirm('You realy wanna link to ' + href + ' ?');
+		if (!confirmPage) {
+			return false;
+		}
+		document.location.href = href;
+	}
+
 	for (var i = 0; i < elem.length; i++) {
-		elem[i].onmouseover = function(event){
+		elem[i].onclick = function(event){
 			var target = event.target;
-			if (target.tagName == 'IMG') {
-				target.nextSibling.nextSibling.nextSibling.nextSibling.classList.toggle('lupa_active');	
+			if (target.classList.contains('link_active')) {
+				livingPage('https://learn.javascript.ru');
 			}
 		}		
 	}
+}
+function Picture(options){
+	var elem = options.elem;
+	for (var i = 0; i < elem.length; i++) {
+		elem[i].onmouseover = function(event){
+			var target = event.target;
+				if (target.className == 'lupa') {
+					target = target.previousSibling.previousSibling.previousSibling.previousSibling;
+					target.style.filter = 'brightness(40%)';
+				}
+				if (target.className == 'link') {
+					target = target.previousSibling.previousSibling;
+					target.style.filter = 'brightness(40%)';
+				}
+				if (target.tagName == 'IMG') {
+					if (target.classList.contains('big_img')) {
+						target.style.filter = 'brightness(100%)';
+					}
+					else{
+						target.style.filter = 'brightness(40%)';
+					}
+				}
+				target.nextSibling.nextSibling.nextSibling.nextSibling.classList.add('lupa_active');	
+				target.nextSibling.nextSibling.classList.add('link_active');	
+		}
+
+		elem[i].onmouseout = function(event){
+			var target = event.target;
+			if (target.tagName == 'IMG') {
+				target.nextSibling.nextSibling.nextSibling.nextSibling.classList.remove('lupa_active');	
+				target.nextSibling.nextSibling.classList.remove('link_active');
+				target.style.filter = 'brightness(100%)';
+			}
+		}
+	}		
 }

@@ -81,9 +81,23 @@ header{
 }
 .datetime.datetime_open{
 	display: block;
+	position: absolute;
 }
 .search_inner_elem{
 	display: none;
+}
+.btn_search_elem{
+	display: none;
+}
+.btn_search_elem.btn_search_elem_open{
+	display: block;
+	background-color: #708090;
+	width: 70px;
+	text-align: center;
+	margin: 5px auto;
+	padding: 0 10px;
+	border: 2px solid #8A2BE2;
+
 }
 .search_inner_elem.search_inner_elem_open{
 	display: block;
