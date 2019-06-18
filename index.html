@@ -357,9 +357,7 @@
 				<div class="posts">
 					<div class="post">
 						<div class="post_head">
-							<div class="post_block_img">
-								<img src="img/post_shoose.png" alt="" class="post_img">
-							</div>
+							<img src="img/post_shoose.png" alt="" class="post_img">
 							<div class="day">30</div>
 							<div class="month">Sep.</div>
 							<div class="slider_inner post_slider">
@@ -414,11 +412,14 @@
 					</div>
 				</div>
 				<div class="posts_arrows">
-					<a href="#" class="left_post"></a>
-					<a href="#" class="right_post right_post_active"></a>
+					<a class="left_post"></a>
+					<a class="right_post right_post_active"></a>
 				</div>
 				<script>
-					
+					var slider_arrows = new Arrow({
+						elem_left: document.getElementsByClassName('left_post')[0],
+						elem_right: document.getElementsByClassName('right_post')[0]
+					});
 				</script>
 			</div>
 		</div>

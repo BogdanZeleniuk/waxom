@@ -898,6 +898,7 @@ header{
 	background-size: contain;
 	border: none;
 	display: inline-block;
+	cursor: pointer;
 }
 .right_post{
 	width: 25px;
@@ -907,6 +908,7 @@ header{
 	background-size: contain;
 	border: none;
 	display: inline-block;
+	cursor: pointer;
 }
 #waxom-clients{
 	background: url(../img/clients_bg.png);
