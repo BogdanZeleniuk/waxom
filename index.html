@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800" rel="stylesheet">
-	<script src="js/main.js"></script>
+
+	<script src="js/main.js" defer></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -19,24 +20,38 @@
 				</div>
 				
 				<nav class="menu">
-						<a class="menu_link" href="#">Home</a>
-						<a class="menu_link" href="#">About Us</a>
-						<a class="menu_link" href="#">Portfolio</a>
-						<a class="menu_link" href="#">Features</a>
-						<a class="menu_link" href="#">Blog</a>
-						<a class="menu_link" href="#">Pricing</a>
-						<a class="menu_link" href="#">Shortcodes</a>
-						<a class="menu_link" href="#">Contact</a>
-						<a class="menu_link calendar" id="calendar"></a>
-						<a class="menu_link search_icon" id="search_icon"></a>
-						<script>
-								var calendar = new Calendar({
-									elem: document.getElementById('calendar')
-								});
-								var search = new Search({
-									elem: document.getElementById('search_icon')
-								});
-						</script>
+					<ul>
+						<li>
+							<a class="menu_link" href="#">Home</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">About Us</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Portfolio</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Features</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Blog</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Pricing</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Shortcodes</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Contact</a>
+						</li>
+						<li>
+							<a class="menu_link calendar" id="calendar"></a>
+						</li>
+						<li>
+							<a class="menu_link search_icon" id="search_icon"></a>
+						</li>
+					</ul>
 				</nav>
 			</div>
 		</div>
@@ -61,32 +76,76 @@
 			<div class="second_menu_logo" id="menu_copy">
 				<a class="second_menu_icon"><i class="fa fa-toggle-down"></i></a>
 					<div class="second_menu" id="second_menu">
-					<a class="menu_link" href="#">Home</a>
-					<a class="menu_link" href="#">About Us</a>
-					<a class="menu_link" href="#">Portfolio</a>
-					<a class="menu_link" href="#">Features</a>
-					<a class="menu_link" href="#">Blog</a>
-					<a class="menu_link" href="#">Pricing</a>
-					<a class="menu_link" href="#">Shortcodes</a>
-					<a class="menu_link" href="#">Contact</a>
+					<ul>
+						<li>
+							<a class="menu_link" href="#">Home</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">About Us</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Portfolio</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Features</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Blog</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Pricing</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Shortcodes</a>
+						</li>
+						<li>
+							<a class="menu_link" href="#">Contact</a>
+						</li>
+						<li>
+							<a class="menu_link calendar" id="calendar"></a>
+						</li>
+						<li>
+							<a class="menu_link search_icon" id="search_icon"></a>
+						</li>
+					</ul>
 					</div>
 			</div>
-				<script>
-					var menu_copy = new Menu({
-						elem: document.getElementById('menu_copy'),
-						menu_elem: document.getElementById('second_menu')
-					});
-				</script>
-
 			<div class="intro_slider">
 				<div class="slider_inner">
-					<span class="intro_dot" id="01"></span>
-					<span class="intro_dot active_dot" id="02"></span>
-					<span class="intro_dot" id="03"></span>
-					<span class="intro_dot" id="04"></span>
-					<span class="intro_dot" id="05"></span>
+					<ul>
+						<li>
+							<span class="intro_dot" id="01"></span>
+						</li>
+						<li>
+							<span class="intro_dot active_dot" id="02"></span>
+						</li>
+						<li>
+							<span class="intro_dot" id="03"></span>
+						</li>
+						<li>
+							<span class="intro_dot" id="04"></span>
+						</li>
+						<li>
+							<span class="intro_dot" id="05"></span>
+						</li>
+					</ul>
 				</div>
 			</div>
+
+			<form class="publish" id="publish" method="GET">
+				<div class="news_box">
+					<div class="news_window close_window">
+						<a class="close_news"><i class="fa fa-times-circle" id="close_news_btn"></i></a>
+						<p class="news_desc">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae nostrum consequatur repudiandae inventore! Velit culpa optio repudiandae illum architecto, vel harum aspernatur officiis beatae cupiditate et magnam unde, odit quasi!
+						</p>
+						<div class="news_btns">
+							<input type="button" class="news_btn" id="news_read" value="Read it"/>
+							<input type="submit" id="news_reload" class="news_btn" value="Reload it"/>	
+						</div>
+					</div>	
+				</div>
+			</form>
 		</div>
 	</section>
 	
@@ -127,14 +186,6 @@
 				<img src="img/browser-center.png" alt="" class="browser_center" id="browser_center">
 				<img src="img/browser-right.png" alt="" class="browser_right" id="browser_right">
 			</div>
-			<script>
-				var browser_pictures = new BrowserPictures({
-					elem: document.getElementsByClassName('browser_pictures')[0],
-					left: document.getElementById('browser_left'),
-					center: document.getElementById('browser_center'),
-					right: document.getElementById('browser_right')
-				});
-			</script>
 		</div>
 	</section>
 	<section class="waxom_wordpress" id="waxom_wordpress">
@@ -161,11 +212,13 @@
 				</p>
 
 				<div class="projects_menu">
-						<a href="#" id="all" class="project_btn button_active">All</a>
-						<a href="#" id="web-design" class="project_btn">Web Design</a>
-						<a href="#" id="mobile-app" class="project_btn">Mobile App</a>
-						<a id="illustration" class="project_btn">Illustration</a>
-						<a id="photography" class="project_btn">Photography</a>
+					<ul>
+						<li><a href="#" id="all" class="project_btn button_active">All</a></li>
+						<li><a href="#" id="web-design" class="project_btn">Web Design</a></li>
+						<li><a href="#" id="mobile-app" class="project_btn">Mobile App</a></li>
+						<li><a id="illustration" class="project_btn">Illustration</a></li>
+						<li><a id="photography" class="project_btn">Photography</a></li>
+					</ul>
 				</div>
 			</div>
 
@@ -236,21 +289,6 @@
 							<div class="project_kategory">Photography, Holiday</div>
 						</div>
 					</div>
-					<script>
-							var lupa = new Lupa({
-								elem: document.getElementsByClassName('lupa')
-							});
-						</script>
-						<script>
-							var picture = new Picture({
-								elem: document.getElementsByClassName('picture')
-							})
-						</script>
-						<script>
-							var link = new Link({
-								elem: document.getElementsByClassName('link')
-							})
-						</script>
 				</div>
 			<div class="load_more_btn">
 				<a href="#" id="load-more" class="load_more btn">load more</a>
@@ -275,7 +313,6 @@
 		<div class="container">
 			<div class="mobile_box">
 				<img src="img/iPhone-in-hand.png" class="iphone_img" alt="">
-				
 				<div class="for_mobile_devices">
 					<h2 class="title_for_mobile">
 						Excellent for Mobile Devices.
@@ -353,7 +390,6 @@
 				<p>
 					Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
 				</p>
-
 				<div class="posts">
 					<div class="post">
 						<div class="post_head">
@@ -378,7 +414,6 @@
 							<a href="#" class="read_more_post_btn">Read More</a> 
 						</div>
 					</div>
-
 					<div class="post">
 						<div class="post_head">
 							<img src="img/post_notebook.png" alt="" class="post_img post_active_img">
@@ -415,12 +450,6 @@
 					<a class="left_post"></a>
 					<a class="right_post right_post_active"></a>
 				</div>
-				<script>
-					var slider_arrows = new Arrow({
-						elem_left: document.getElementsByClassName('left_post')[0],
-						elem_right: document.getElementsByClassName('right_post')[0]
-					});
-				</script>
 			</div>
 		</div>
 	</section>
@@ -521,14 +550,30 @@
 		<div class="container">
 			<div class="footer_menu">
 				<div class="menu">
-					<a href="#" class="menu_item">Copyright © 2015 <span class="footer_option">Waxom</span></a>
-					<a href="#" class="menu_item">Privacy Policy</a>
-					<a href="#" class="menu_item"><span class="faq">FAQ</span></a>
-					<a href="#" class="menu_item">Support</a>
+					<ul class="footer_menu_left">
+						<li>
+							<a href="#" class="menu_item">Copyright © 2015 <span class="footer_option">Waxom</span></a>
+						</li>
+						<li>
+							<a href="#" class="menu_item">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#" class="menu_item"><span class="faq">FAQ</span></a>
+						</li>
+						<li>
+							<a href="#" class="menu_item">Support</a>
+						</li>
+					</ul>
 				</div>
 				<div class="menu">
-					<a href="#" class="menu_item">Designed by <span class="footer_option">ThemeFire</span></a>
-					<a href="#" class="menu_item">Only on <span class="footer_option">Envato Market</span></a>
+					<ul class="footer_menu_left">
+						<li>
+							<a href="#" class="menu_item">Designed by <span class="footer_option">ThemeFire</span></a>
+						</li>
+						<li>
+							<a href="#" class="menu_item">Only on <span class="footer_option">Envato Market</span></a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

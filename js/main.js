@@ -1,3 +1,7 @@
+var calendar = new Calendar({
+	elem: document.getElementById('calendar')
+});
+
 function Calendar(options) {
 	var elem = options.elem;
 	var isOpen = false;
@@ -74,17 +78,20 @@ function Calendar(options) {
 	}
 }
 
+var search = new Search({
+	elem: document.getElementById('search_icon')
+});
+
 function Search(options) {
 	var elem = options.elem;
 	var isOpen = false;
-
 	function createInput() {
 			var input_search = document.createElement('input');
 			elem.appendChild(input_search);
 			input_search.setAttribute('type', 'search');
 			input_search.className = 'search_inner_elem';
 
-			var btn_search = document.createElement('a');
+			var btn_search = document.createElement('button');
 			btn_search.innerHTML = 'Search';
 			btn_search.className = 'btn_search_elem';
 			elem.appendChild(btn_search);
@@ -149,6 +156,11 @@ function Search(options) {
 	}
 }
 
+var menu_copy = new Menu({
+	elem: document.getElementById('menu_copy'),
+	menu_elem: document.getElementById('second_menu')
+});
+
 function Menu(options){
 	var elem = options.elem;
 	var menu_elem = options.menu_elem;
@@ -174,6 +186,14 @@ function Menu(options){
 		}
 	}
 }
+
+var browser_pictures = new BrowserPictures({
+	elem: document.getElementsByClassName('browser_pictures')[0],
+	left: document.getElementById('browser_left'),
+	center: document.getElementById('browser_center'),
+	right: document.getElementById('browser_right')
+});
+
 function BrowserPictures(options){
 	var elem = options.elem;
 	var left = options.left;
@@ -200,6 +220,11 @@ function BrowserPictures(options){
 		}
 	}
 }
+
+var lupa = new Lupa({
+	elem: document.getElementsByClassName('lupa')
+});
+
 function Lupa(options){
 	var elem = options.elem;
 
@@ -212,6 +237,11 @@ function Lupa(options){
 		}		
 	}
 }
+
+var link = new Link({
+	elem: document.getElementsByClassName('link')
+});
+
 function Link(options){
 	var elem = options.elem;
 
@@ -232,6 +262,11 @@ function Link(options){
 		}		
 	}
 }
+
+var picture = new Picture({
+	elem: document.getElementsByClassName('picture')
+});
+
 function Picture(options){
 	var elem = options.elem;
 	for (var i = 0; i < elem.length; i++) {
@@ -267,6 +302,12 @@ function Picture(options){
 		}
 	}		
 }
+
+var slider_arrows = new Arrow({
+	elem_left: document.getElementsByClassName('left_post')[0],
+	elem_right: document.getElementsByClassName('right_post')[0]
+});
+
 function Arrow(options){
 	var elem_left = options.elem_left;
 	var elem_right = options.elem_right;
@@ -322,6 +363,55 @@ function Arrow(options){
 				postList[i-1].querySelector('.post-desc > .title_post_desc').classList.add('post_desc_title_active');
 				postList[i-1].querySelector('.post-desc > .post_desc_text').classList.add('post_desc_text_active');
 			}
+		}
+	}
+}
+
+var news_elem = new News({
+	elem: document.getElementById('close_news_btn'),
+	news_window: document.getElementsByClassName('news_window')[0],
+	reload_btn: document.getElementById('news_reload'),
+	news_box: document.getElementsByClassName('news_box')[0],
+	news_desc: document.getElementsByClassName('news_desc'),
+	publish: document.getElementById('publish')
+});
+
+function News(options){
+	var elem = options.elem;
+	var news_window = options.news_window;
+	var reload_btn = options.reload_btn;
+	var news_box = options.news_box;
+	var news_desc = options.news_desc;
+	var publish = options.publish;
+
+	elem.onclick = function(event){
+		var target = event.target;
+		if (target.classList.contains('fa')) {
+			news_window.classList.toggle('close_window');
+		}
+	}
+
+	window.onload = function(event){
+		news_window.classList.toggle('close_window');
+	}
+	publish.onsubmit = function(){
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET", "/index.html", true);
+		xhr.send(null);
+		xhr.onreadystatechange = function () {
+			if (xhr.status != 200) {
+				console.log("status " + xhr.status);
+				return;
+			}
+			if (xhr.readyState != 4) {
+				console.log("state " + xhr.readyState);
+				return;
+			}
+			
+			console.log("status " + xhr.status + ", state " + xhr.readyState);
+			var allText = xhr.responseText;
+			news_desc.innerHTML = "";
+			news_desc.innerHTML = allText;
 		}
 	}
 }
