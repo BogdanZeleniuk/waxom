@@ -205,10 +205,10 @@ li{
 	max-width: 100px;
 	height: 100px;
 	cursor: pointer;
-	display: none;
 	position: absolute;
 	left: 0;
 	right: 0;
+	display: none;
 }
 .second_menu_icon {
 	width: 100%;
@@ -222,9 +222,6 @@ li{
 	font-size: 100px;
 }
 .second_menu {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	width: 850px;
 	margin: 20px auto 0;
 	display: none;
